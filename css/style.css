@@ -13,6 +13,11 @@ body {
   font-weight: 300;
   line-height: 1.6; }
 
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+
 .sidebar {
   background-color: #ffb65e; }
 
@@ -32,10 +37,10 @@ body {
   background-color: #f9f7f6; }
 
 .homes {
-  background-color: #54483A; }
+  background-color: #1d334d; }
 
 .gallery {
   background-color: #54483A; }
 
 .footer {
-  background-color: #54483A; }
+  background-color: #aaa; }
