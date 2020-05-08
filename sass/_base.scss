@@ -1,5 +1,5 @@
 // COLOR VARIABLES
-$color-primary: #ffb65e;
+$color-primary: #e9a24b;
 $color-primary-dark: rgb(170, 122, 68);
 
 $color-secondary: #1d334d;
@@ -29,10 +29,6 @@ body {
     color: $color-grey-dark-2;
     font-weight: 300;
     line-height: 1.6;
-    & > * {
-        padding: 2rem;
-        font-size: 2rem;
-    }
 }
 .container {
     display: grid;
