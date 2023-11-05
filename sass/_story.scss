@@ -1,0 +1,43 @@
+.story {
+  &__pictures {
+    background-color: $color-primary;
+    grid-column: full-start/col-end 4;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    place-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: full-start/full-end;
+    }
+  }
+  &__img--1 {
+    grid-column: 2/-2;
+    grid-row: 2/-2;
+    width: 100%;
+  }
+  &__img--2 {
+    width: 130%;
+    z-index: 100;
+    grid-column: 5/-1;
+    grid-row: 5/-1;
+    
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+      grid-column: 5/-1;
+      transform: translate(-10px, -10px);
+    }
+  }
+
+  &__content {
+    background-color: $color-grey-light-1;
+    grid-column: col-end 4 / full-end;
+    padding: 12rem 6rem;
+    display: grid;
+    place-content: center;
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: full-start/full-end;
+      grid-row: 5/6;
+    }
+  }
+}

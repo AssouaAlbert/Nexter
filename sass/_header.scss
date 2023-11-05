@@ -1,0 +1,77 @@
+.header {
+  grid-column: full-start/col-start 7;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-secondary, 0.9),
+      rgba($color-secondary, 0.9)
+    ),
+    url(../img/hero.jpeg);
+  background-size: cover;
+  padding: 8rem;
+
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(min-content, 6rem) 1fr;
+  //* grid-template-columns: max-content;
+  // ! Because of Media Query
+  grid-template-columns: minmax(min-content, max-content);
+  justify-content: center;
+  row-gap: 1rem;
+
+  @media only screen and (max-width: $bp-normal) {
+    padding: 3rem;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start/full-end;
+  }
+
+  &__logo {
+    height: 3rem;
+    justify-self: center;
+  }
+  &__btn {
+    place-self: start;
+  }
+  &__seenon-text {
+    display: grid;
+
+    font-size: 1.6rem;
+    color: #aaa;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    padding: 3rem;
+    font-family: $font-primary;
+    &::after {
+      content: "";
+      background-color: currentColor;
+      //   grid-column: 1/2;
+      height: 1px;
+      display: block;
+      width: 90%;
+      justify-self: end;
+    }
+    &::before {
+      content: "";
+      height: 1px;
+      width: 90%;
+      display: block;
+      justify-self: end;
+      justify-self: start;
+
+      background-color: currentColor;
+
+      // grid-column: 3/4;
+    }
+  }
+  &__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    img {
+        // ! Because of Media Query
+      // height: 2.5rem;
+      max-height: 2.5rem;
+      max-width: 100%;
+
+    }
+  }
+}
